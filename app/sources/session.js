@@ -1,11 +1,13 @@
 import config from 'config';
 import request from 'lib/request';
+import requestAuth from 'lib/requestAuth';
 
 export default class SessionSource {
-  static urlRoot = `${config.apiTarget}/users/sign_in`
+  static signInPath = `${config.apiTarget}/users/sign_in`
+  static signOutPath = `${config.apiTarget}/users/sign_out`
 
   static create(user) {
-    return request(this.urlRoot, {
+    return request(this.signInPath, {
       method: 'POST',
       body: JSON.stringify(user)
     })
@@ -13,7 +15,7 @@ export default class SessionSource {
   }
 
   static delete(user) {
-    return request(`${this.urlRoot}/${user.id}`, {
+    return requestAuth(this.signOutPath, {
       method: 'DELETE'
     });
   }
