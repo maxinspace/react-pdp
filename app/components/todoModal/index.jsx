@@ -18,7 +18,7 @@ export default class TodoModal extends Component {
     isModalOpen: PropTypes.bool,
     todo: PropTypes.shape({
       name: PropTypes.string,
-      isComplete: PropTypes.bool
+      complete: PropTypes.bool
     })
   }
 

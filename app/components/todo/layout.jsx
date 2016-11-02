@@ -18,7 +18,7 @@ export default class TodoLayout extends Component {
     todos: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.id,
-        isComplete: PropTypes.bool,
+        complete: PropTypes.bool,
         name: PropTypes.string
       })
     )
@@ -43,7 +43,7 @@ export default class TodoLayout extends Component {
   renderList = (complete) => {
     return (
       <TodoList
-        todos={ this.props.todos.filter(todo => todo.isComplete === complete) }
+        todos={ this.props.todos.filter(todo => todo.complete === complete) }
       />
     );
   }

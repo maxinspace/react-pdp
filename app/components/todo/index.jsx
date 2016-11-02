@@ -8,13 +8,13 @@ export default class Todo extends Component {
   static propTypes = {
     todo: PropTypes.shape({
       id: PropTypes.number,
-      isComplete: PropTypes.bool,
+      complete: PropTypes.bool,
       name: PropTypes.string
     })
   }
 
   toggle = () => {
-    this.props.todo.isComplete = !this.props.todo.isComplete;
+    this.props.todo.complete = !this.props.todo.complete;
     TodosActions.update(this.props.todo);
   }
 

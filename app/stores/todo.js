@@ -9,7 +9,7 @@ export default class TodoStore {
 
   defaultProps = {
     name: '',
-    isComplete: false
+    complete: false
   }
 
   constructor() {

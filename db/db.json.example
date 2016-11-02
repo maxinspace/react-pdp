@@ -3,27 +3,27 @@
     {
       "id": 1,
       "name": "Pick up milk",
-      "isComplete": false
+      "complete": false
     },
     {
       "id": 2,
       "name": "Pick up dry cleaning",
-      "isComplete": true
+      "complete": true
     },
     {
       "id": 3,
       "name": "Grocery shopping",
-      "isComplete": false
+      "complete": false
     },
     {
       "id": 4,
       "name": "Hem pants",
-      "isComplete": false
+      "complete": false
     },
     {
       "id": 5,
       "name": "Oil change",
-      "isComplete": true
+      "complete": true
     }
   ],
   "session": [

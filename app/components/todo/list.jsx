@@ -7,7 +7,7 @@ export default class TodoList extends Component {
     todos: PropTypes.arrayOf(
       PropTypes.shape({
         id: PropTypes.id,
-        isComplete: PropTypes.bool,
+        complete: PropTypes.bool,
         name: PropTypes.string
       })
     )

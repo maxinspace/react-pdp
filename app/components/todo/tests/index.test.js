@@ -5,7 +5,7 @@ import Todo from 'components/todo';
 import TodosActions from 'actions/todos';
 
 describe('Todo', () => {
-  const todo = { id: 1, isComplete: false, name: "Something to do" };
+  const todo = { id: 1, complete: false, name: "Something to do" };
 
   beforeEach(function() {
     this.todoComponent = mount(<Todo todo={ todo }/>);
@@ -24,7 +24,7 @@ describe('Todo', () => {
     this.todoComponent.find(ListGroupItem).at(0).simulate('click');
 
     expect(TodosActions.update).toHaveBeenCalled();
-    expect(this.todoComponent.props().todo.isComplete).toEqual(true);
+    expect(this.todoComponent.props().todo.complete).toEqual(true);
   });
 
   it('calls delete() when clicking on delete icon', function() {

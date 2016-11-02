@@ -32,9 +32,6 @@ export default class TodosStore {
   }
 
   create(todo) {
-    let found = maxBy(this.todos, item => item.id);
-
-    todo = Object.assign({ id: ++found }, todo);
     this.todos.push(todo);
   }
 
